@@ -41,10 +41,57 @@ El sistema está organizado en dos componentes principales: el backend y el fron
 - **Registro de Ventas y Compras:** Facilitar la realización de transacciones y mantener un registro detallado de todas las actividades comerciales.
 - **Interfaz Dinámica:** Ofrecer una experiencia de usuario interactiva y responsiva a través del frontend desarrollado en Angular.
 
-## 📦 Instalación
+## 📦 Clonacion
 
-Para instalar y ejecutar el proyecto en tu entorno local, sigue estos pasos:
+Para clonar el proyecto en tu entorno local, sigue estos pasos:
 
 1. **Clona el repositorio:**
    ```bash
-   git clone https://github.com/tu-usuario/tienda-panchita.git
+   git clone https://github.com/AngelGabriel0508/Sistema_Ventas.git
+
+## 🛠️ Configuración
+
+### Configura la base de datos local de Oracle
+
+Si deseas ejecutar el sistema con una base de datos Oracle local, asegúrate de que Oracle Database esté instalado y configurado. Luego, modifica el archivo `application.properties` en tu proyecto de Spring Boot con la siguiente configuración:
+    ```properties
+    
+    spring.application.name=sistventas
+    server.port=8080
+
+    # Configuraciones de Oracle
+    spring.datasource.url=jdbc:oracle:thin:@localhost:1521/XE
+    spring.datasource.username=ANGEL
+    spring.datasource.password=123456789
+    spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+    
+### Configura el entorno autónomo con Wallets
+
+Si deseas ejecutar el sistema utilizando un Wallet de Oracle, asegúrate de tener la carpeta `Wallet_SistemaVentas` configurada correctamente. Luego, modifica el archivo `application.properties` de la siguiente manera:
+    ```properties
+    
+    server.port=8080
+    server.servlet.context-path=/
+    spring.application.name=sistventas
+
+    # Configuraciones de Oracle usando Wallet
+    spring.datasource.url=jdbc:oracle:thin:@sistemaventas_medium?TNS_ADMIN=Wallet_SistemaVentas
+    spring.datasource.username=panchita
+    spring.datasource.password=soyAngelDB2024
+    spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+
+### Agrega la carpeta de Wallets al proyecto
+
+Asegúrate de incluir la carpeta `Wallet_SistemaVentas` en la raíz de tu proyecto de Spring Boot. Esta carpeta debe contener los archivos necesarios para la conexión con la base de datos mediante el Wallet.
+
+### Ejecuta el backend
+
+Navega hasta el directorio del backend y ejecuta el siguiente comando para iniciar el servidor Spring Boot:
+
+```bash
+cd backend
+mvn spring-boot:run
+
+
+
+
