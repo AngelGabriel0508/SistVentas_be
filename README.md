@@ -17,9 +17,13 @@ El **Sistema de Ventas para Tienda Panchita** es una aplicación diseñada para 
   - **Angular:** El frontend está construido con Angular, un marco de trabajo robusto que permite crear aplicaciones web dinámicas y eficientes.
   - **Visual Studio:** Este IDE se utiliza para el desarrollo del frontend, proporcionando una interfaz intuitiva y herramientas útiles para optimizar el flujo de trabajo.
 
+- **Aplicación Móvil:**
+  - **Android Studio:** La aplicación móvil se desarrolla en Android Studio, proporcionando una interfaz amigable para gestionar ventas y compras desde dispositivos móviles.
+  - **Genymotion / Android Emulator:** Estas plataformas se utilizan para simular el entorno Android y probar la aplicación móvil de manera eficiente.
+
 ### 📊 Estructura del Sistema
 
-El sistema está organizado en dos componentes principales: el backend y el frontend, que interactúan para proporcionar una experiencia de usuario fluida y eficiente. La base de datos Oracle se utiliza para gestionar tanto la información maestra como transaccional, incluyendo:
+El sistema está organizado en tres componentes principales: el backend, el frontend y la aplicación móvil, que interactúan para proporcionar una experiencia de usuario fluida y eficiente. La base de datos Oracle se utiliza para gestionar tanto la información maestra como transaccional, incluyendo:
 
 #### Tablas Maestras:
 - **Clientes:** Almacena la información de los clientes, facilitando la gestión de sus datos y transacciones.
@@ -40,12 +44,12 @@ El sistema está organizado en dos componentes principales: el backend y el fron
 - **Clasificación de Productos:** Organizar productos en categorías para una fácil navegación y gestión.
 - **Registro de Ventas y Compras:** Facilitar la realización de transacciones y mantener un registro detallado de todas las actividades comerciales.
 - **Interfaz Dinámica:** Ofrecer una experiencia de usuario interactiva y responsiva a través del frontend desarrollado en Angular.
+- **Aplicación Móvil:** Proporcionar una solución móvil para gestionar ventas y compras desde dispositivos Android.
 
-## 📦 Clonacion
+## 📦 Clonación
 
 Para clonar el proyecto en tu entorno local, sigue estos pasos:
 
 1. **Clona el repositorio:**
    ```bash
    git clone https://github.com/AngelGabriel0508/Sistema_Ventas.git
-
