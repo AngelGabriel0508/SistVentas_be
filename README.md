@@ -95,14 +95,7 @@ Navega hasta el directorio del backend y ejecuta el siguiente comando para inici
 ### Ejecuta el frontend
 
 Si tienes el frontend desarrollado en Angular, dirígete al directorio del frontend y ejecuta el siguiente comando para iniciar el servidor Angular:
-
-```bash
-cd frontend
-ng serve
-
-
-
-
-
-
-
+    ```bash
+    
+    cd frontend
+    ng serve
