@@ -87,10 +87,21 @@ Asegúrate de incluir la carpeta `Wallet_SistemaVentas` en la raíz de tu proyec
 ### Ejecuta el backend
 
 Navega hasta el directorio del backend y ejecuta el siguiente comando para iniciar el servidor Spring Boot:
+    ```bash
+    
+    cd backend
+    mvn spring-boot:run
+
+### Ejecuta el frontend
+
+Si tienes el frontend desarrollado en Angular, dirígete al directorio del frontend y ejecuta el siguiente comando para iniciar el servidor Angular:
 
 ```bash
-cd backend
-mvn spring-boot:run
+cd frontend
+ng serve
+
+
+
 
 
 
