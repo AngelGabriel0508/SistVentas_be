@@ -1,27 +1,35 @@
-# Sisventas
+# 🌐 Frontend del Sistema de Ventas para Tienda Panchita
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
+Este repositorio contiene el código fuente del frontend para el **Sistema de Ventas para Tienda Panchita**, desarrollado utilizando **Angular**. Este frontend se conecta a la API REST desarrollada en **Spring Boot** para gestionar productos, clientes, ventas, proveedores y otros módulos relacionados con el sistema de ventas.
 
-## Development server
+## 📋 Contenido
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+El repositorio incluye las siguientes carpetas y archivos importantes:
 
-## Code scaffolding
+- `src/app/`: Contiene los componentes, servicios, modelos y módulos del frontend.
+- `src/assets/`: Archivos de recursos estáticos como imágenes, fuentes y archivos de estilo.
+- `src/environments/`: Archivos de configuración para diferentes entornos (desarrollo y producción).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🚀 Funcionalidades Principales
 
-## Build
+El frontend incluye las siguientes funcionalidades:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Gestión de clientes (alta, baja, modificación y consulta).
+- Gestión de productos (consulta de inventario, productos por vencer, y productos en stock bajo).
+- Registro de ventas (selección de productos, cálculo de totales y detalles de las ventas).
+- Gestión de proveedores (alta, baja y modificación).
+- Consulta de ventas y reportes de ventas.
+- Generación de reportes en formato PDF y Excel (utilizando **JasperReports** en el backend).
 
-## Running unit tests
+## 📦 Requisitos Previos
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Asegúrate de tener instalados los siguientes programas en tu entorno de desarrollo:
 
-## Running end-to-end tests
+- **Node.js** (versión 14 o superior)
+- **Angular CLI** (versión 12 o superior)
+- **NPM** (gestor de paquetes de Node.js)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Para instalar **Angular CLI**, si no lo tienes instalado:
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+npm install -g @angular/cli
