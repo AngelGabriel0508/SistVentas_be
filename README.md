@@ -54,7 +54,6 @@ Para clonar el proyecto en tu entorno local, sigue estos pasos:
 ### Configura la base de datos local de Oracle
 
 Si deseas ejecutar el sistema con una base de datos Oracle local, asegúrate de que Oracle Database esté instalado y configurado. Luego, modifica el archivo `application.properties` en tu proyecto de Spring Boot con la siguiente configuración:
-    ```properties
     
     spring.application.name=sistventas
     server.port=8080
@@ -68,7 +67,6 @@ Si deseas ejecutar el sistema con una base de datos Oracle local, asegúrate de 
 ### Configura el entorno autónomo con Wallets
 
 Si deseas ejecutar el sistema utilizando un Wallet de Oracle, asegúrate de tener la carpeta `Wallet_SistemaVentas` configurada correctamente. Luego, modifica el archivo `application.properties` de la siguiente manera:
-    ```properties
     
     server.port=8080
     server.servlet.context-path=/
@@ -87,7 +85,6 @@ Asegúrate de incluir la carpeta `Wallet_SistemaVentas` en la raíz de tu proyec
 ### Ejecuta el backend
 
 Navega hasta el directorio del backend y ejecuta el siguiente comando para iniciar el servidor Spring Boot:
-    ```bash
     
     cd backend
     mvn spring-boot:run
@@ -95,7 +92,6 @@ Navega hasta el directorio del backend y ejecuta el siguiente comando para inici
 ### Ejecuta el frontend
 
 Si tienes el frontend desarrollado en Angular, dirígete al directorio del frontend y ejecuta el siguiente comando para iniciar el servidor Angular:
-    ```bash
     
     cd frontend
     ng serve
