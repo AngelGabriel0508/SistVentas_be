@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_product" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f36c9605-c8eb-45ef-84e3-efdd65bb301f">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="conexion_oracleDocker"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT 
+    p.id AS product_id, 
+    p.name AS product_name, 
+    cp.name AS category_name,  
+    p.price_purchase, 
+    p.price_sale, 
+    p.date_expiry, 
+    p.stock
+FROM 
+    product p
+JOIN 
+    category_product cp ON p.category_product_id = cp.id
+ ORDER BY
+ 	p.id]]>
+	</queryString>
+	<field name="PRODUCT_ID" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="PRODUCT_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="PRODUCT_ID"/>
+	</field>
+	<field name="PRODUCT_NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PRODUCT_NAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="PRODUCT_NAME"/>
+	</field>
+	<field name="CATEGORY_NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CATEGORY_NAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="CATEGORY_NAME"/>
+	</field>
+	<field name="PRICE_PURCHASE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="PRICE_PURCHASE"/>
+		<property name="com.jaspersoft.studio.field.label" value="PRICE_PURCHASE"/>
+	</field>
+	<field name="PRICE_SALE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="PRICE_SALE"/>
+		<property name="com.jaspersoft.studio.field.label" value="PRICE_SALE"/>
+	</field>
+	<field name="DATE_EXPIRY" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="DATE_EXPIRY"/>
+		<property name="com.jaspersoft.studio.field.label" value="DATE_EXPIRY"/>
+	</field>
+	<field name="STOCK" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="STOCK"/>
+		<property name="com.jaspersoft.studio.field.label" value="STOCK"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="101" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="0" width="50" height="15" uuid="009eab95-3dfe-423d-a510-c2349eb63487">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Empresa:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="23" width="50" height="15" uuid="f42eeb45-f12f-4962-9283-225eefac27a8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RUC: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="46" width="50" height="15" uuid="768df64f-12a0-4028-8ed6-764bec6173f4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="73" width="41" height="15" uuid="124563d4-b538-4230-90ad-f6143df9fe28">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Correo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="50" width="50" height="15" uuid="16712060-27e8-4c87-9697-855d2748e5af">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="328" y="0" width="72" height="30" uuid="85e2e344-6816-4f0e-b8ac-6edcf2295bd7"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha y Hora de Impresión:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="72" width="147" height="16" uuid="eed9f992-bf55-4b6d-b44a-e0bd11bf80a0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[angel.castilla@vallegrande.edu.pe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="41" width="147" height="28" uuid="da32460b-3f0e-40b8-85c0-db53a6c0c757"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Calle Cajamarca 4ta Cuadra - Cañete- Perú]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="24" width="70" height="16" uuid="e0e89cba-e5da-47bc-8815-61b727934292"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[20780197782]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="1" width="85" height="16" uuid="61846bff-3b91-48e1-b9ab-366d73db2fe3"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Tienda Panchita]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="400" y="15" width="92" height="14" uuid="07ec1466-f7de-4223-a886-7588bffc0c38"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="471" y="15" width="50" height="14" uuid="f352f1ba-d307-4b59-b47c-d816772ae59a"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="387" y="50" width="63" height="16" uuid="01dfb8f0-4cf9-4304-b8ce-6470a8ceada3"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[936609401]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-1" y="100" width="555" height="1" uuid="1d1529c2-00d0-421b-951f-3aec4ec407a5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="6" width="554" height="30" forecolor="#FFFFFF" backcolor="#336B87" uuid="b8c3932c-9dec-47c2-9478-030db8bcd4f1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte de Productos - Tienda Panchita]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-1" y="5" width="555" height="35" forecolor="#FFFFFF" backcolor="#9C9CF7" uuid="c8b1b735-a0d9-400b-be4f-74f762de3bd8"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="7" width="20" height="30" uuid="45dcb524-a99b-4c8a-ab4d-d252e5a205fc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="7" width="110" height="30" uuid="16b79b65-4dd8-4ec7-b3d1-11284d45bb55"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="150" y="7" width="100" height="30" backcolor="#FFFFFF" uuid="0d0d14f5-1444-45d4-9bb1-da0de9efa654"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Categoria]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="7" width="78" height="30" uuid="54cd8ee8-8c28-4b18-a92c-f42a2d7987e9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Precio de Compra]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="328" y="7" width="72" height="30" uuid="9a5d9de7-3db1-4588-a5e1-fe764aed22d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Precio de Venta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="7" width="92" height="30" uuid="0c7d1520-0d18-45e3-bed9-6da6aacdff34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Expiracion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="492" y="7" width="59" height="30" uuid="ffcfc836-c2b5-443f-9225-c3072c50154f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Stock]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="-1" width="20" height="30" uuid="778f2184-5b37-4aa4-8a0d-8518a19f6218"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PRODUCT_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="-1" width="115" height="30" uuid="57c05556-f244-4506-bf78-26d3abf7e01b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PRODUCT_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="-1" width="100" height="30" uuid="bfa04c31-7cc0-4a6c-b569-d46459902c88">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{CATEGORY_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="-1" width="78" height="30" uuid="d96399bb-ed5e-488d-ac62-e10e24d2eebb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PRICE_PURCHASE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="-1" width="92" height="30" uuid="c48de552-a5ff-4bd9-84c5-db639ba974c8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{DATE_EXPIRY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="492" y="-1" width="61" height="30" uuid="432323ce-3220-4de3-8385-b7ad30d687f2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{STOCK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="327" y="-1" width="73" height="30" uuid="563e7623-8432-4e75-a3de-0dd9bf7dea8b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PRICE_SALE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="3" width="430" height="30" uuid="4147e4e1-db3f-44ca-8559-d48c55983cc9"/>
+				<text><![CDATA[Representacion impresa de reportes de clientes de la tienda online Tienda Panchita.
+Para mas informacion consulte a la pagina https://www.yocomproenlatiendapanchita.com.pe
+]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
